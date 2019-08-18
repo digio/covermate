@@ -9,6 +9,7 @@ Covermate will exit with non-zero if:
 - The overall code coverage does not meet a specified threshold.
 
 *Note:* As per -coverprofile, packages with no tests are ignored.
+
 *Note:* As per -coverprofile, coverage is package-specific.  i.e. code is only considered covered, if it is called from a test within the same package.
 
 ## Installion
