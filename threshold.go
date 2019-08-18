@@ -24,6 +24,10 @@ func CheckThreshold(filename string, limit float64) error {
 		}
 	}
 
+	// avoid div0
+	if t == 0 {
+		t = 1
+	}
 	overall := math.Round(1000.0*float64(c)/float64(t)) / 10.0
 	if overall < limit {
 		return fmt.Errorf("Coverage %.1f is below required threshold %.1f", overall, limit)

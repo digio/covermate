@@ -9,9 +9,9 @@ import (
 
 func main() {
 	var (
-		filename  = kingpin.Flag("filename", "coverage report from go test").Default("coverage.out").String()
-		tag       = kingpin.Flag("tag", "comment tag to exclude blocks from mandatory coverage").Default("nocover").String()
-		threshold = kingpin.Flag("threshold", "minimum required overall coverage").Default("-1").Float64()
+		filename  = kingpin.Flag("filename", "coverage report from go test").Short('f').Default("coverage.out").String()
+		tag       = kingpin.Flag("tag", "comment tag to exclude blocks from mandatory coverage").Short('t').Default("nocover").String()
+		threshold = kingpin.Flag("threshold", "minimum required overall coverage").Default("-1").Short('T').Float64()
 	)
 	kingpin.Parse()
 
