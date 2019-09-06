@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mantel-digio/covermate.svg?branch=master)](https://travis-ci.org/mantel-digio/covermate)
+
 # Covermate
 
 Covermate is a tool to assist with managing code-coverage metrics.  Go provides builtin tools for assessing code test-coverage.  Covermate extends the capabilities of the Go test-coverage report by allowing coverage-omissions to be flagged, or tagged as exclusions. This allows untested code to be tracked and managed.
