@@ -1,4 +1,4 @@
-module github.com/mantel-digio/covermate
+module github.com/digio/covermate
 
 go 1.12
 

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mantel-digio/covermate.svg?branch=master)](https://travis-ci.org/mantel-digio/covermate)
+[![Build Status](https://travis-ci.org/digio/covermate.svg?branch=master)](https://travis-ci.org/digio/covermate)
 
 # Covermate
 
@@ -17,7 +17,7 @@ Covermate will exit with non-zero if:
 ## Installion
 
 ```bash
-go install github.com/mantel-digio/covermate
+go install github.com/digio/covermate
 ```
 
 ## Usage
