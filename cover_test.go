@@ -5,7 +5,7 @@ import (
 	"os/exec"
 	"testing"
 
-	main "github.com/mantel-digio/covermate"
+	main "github.com/digio/covermate"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -20,7 +20,7 @@ func TestCheckCoverage_NoCoverfile(t *testing.T) {
 func TestCheckCoverage_FullCoverage(t *testing.T) {
 	os.Remove("testdata/coverage.out")
 	cmd := exec.Command("go", "test", "-coverprofile=coverage.out",
-		"github.com/mantel-digio/covermate/testdata/fullcover")
+		"github.com/digio/covermate/testdata/fullcover")
 	cmd.Dir = "testdata"
 	cmd.Stdout = os.Stdout
 	assert.NoError(t, cmd.Run())

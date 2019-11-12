@@ -5,7 +5,7 @@ import (
 	"os/exec"
 	"testing"
 
-	main "github.com/mantel-digio/covermate"
+	main "github.com/digio/covermate"
 	"github.com/stretchr/testify/assert"
 )
 
