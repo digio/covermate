@@ -33,7 +33,7 @@ func CheckCoverage(filename, tag string) error {
 			if block.Count > 0 {
 				continue
 			}
-			node := findNode(block.StartLine, block.StartCol, fs, f)
+			node := findNode(block.StartLine, fs, f)
 			if node == nil {
 				// nocover
 				return fmt.Errorf("Block not found for %s:%d.  Has the source been modified since coverage was generated?",
@@ -62,13 +62,13 @@ func printBlock(fs *token.FileSet, file *ast.File, node ast.Node) error {
 	return nil
 }
 
-func findNode(startLine, startCol int, fs *token.FileSet, file *ast.File) ast.Node {
+func findNode(startLine int, fs *token.FileSet, file *ast.File) ast.Node {
 	var node ast.Node
 	for _, d := range file.Decls {
 		ast.Inspect(d, func(n ast.Node) bool {
 			if n != nil {
 				pos := fs.Position(n.Pos())
-				if pos.Line == startLine && pos.Column == startCol {
+				if pos.Line == startLine {
 					node = n
 					return false
 				}
